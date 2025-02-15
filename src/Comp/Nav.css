@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.NavContainer {
+    width: 100%;
+    /* position: sticky; */
+    top: 0;
+}
+
+.NavRow {
+    background-color: #3D5147;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5cm 1cm;
+}
+
+.signInBtn {
+    padding: 0.4cm 0.8cm;
+    background-color: transparent;
+    border: 1px solid rgb(243, 199, 70);
+    color: rgb(243, 199, 70);
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.signInBtn:hover {
+    /* padding:0.2cm 0.3cm; */
+    /* padding:0.39cm 0.75cm; */
+    background-color: rgb(243, 199, 70);
+    border: 1px solid rgb(243, 199, 70);
+    color: rgb(43, 64, 39);
+    font-weight: bolder;
+    transition: ease-in-out 0.4s;
+}
+
+.NavHead {
+    font-size: 22px;
+    font-family: "Poppins", serif;
+    font-weight: 480;
+    font-style: normal;
+    letter-spacing: 0.09cm;
+    color: white;
+    cursor: url('Logo.png'),auto;
+}
+
+.yellowtxt {
+    color: rgb(236, 197, 59);
+    font-size: 26px;
+}
+
+.navLogo {
+    width: 1.8cm;
+    cursor: pointer;
+}
+
+.navLogo:hover{
+    transform: scale(1.1) ease 0.1s;
+}
+
+@media screen and  (max-width:1024px) and (min-width:720px){
+    .signInBtn{
+        font-size: 14px;
+    }
+
+    .NavHead{
+        font-size: 20px;
+    }
+
+    .navLogo{
+        width:1.5cm;
+    }
+    .NavRow{
+        padding: 0.4cm 0.7cm;
+    }
+}
+
+@media screen and  (max-width:720px) and (min-width:550px){
+    .signInBtn{
+        font-size: 12px;
+        padding: 0.35cm 0.72cm;
+    }
+
+    .NavHead{
+        font-size: 16px;
+        letter-spacing: 0.05cm;
+    }
+    .yellowtxt {
+        font-size: 18px;
+    }
+
+    .navLogo{
+        width:1.1cm;
+       
+    }
+    .NavRow{
+        padding: 0.3cm 0.6cm;
+    }
+}
+
+@media screen and  (max-width:550px) and (min-width:450px) {
+    .signInBtn{
+        font-size: 13px;
+        padding: 0.28cm 0.68cm;
+    }
+
+    .NavHead{
+        font-size: 14px;
+        /* letter-spacing: 0.0cm; */
+    }
+    .yellowtxt {
+        font-size: 16px;
+    }
+
+    .navLogo{
+        width:1.1cm;
+       
+    }
+    .NavRow{
+        padding: 0.25cm 0.55cm;
+    }
+}
+
+@media screen and  (max-width:450px) {
+    .signInBtn{
+        font-size: 12px;
+        padding: 0.2cm 0.6cm;
+    }
+
+    .NavHead{
+        /* font-size: 14px; */
+        display: none;
+        /* letter-spacing: 0.0cm; */
+    }
+    .yellowtxt {
+        font-size: 16px;
+    }
+
+    .navLogo{
+        width:1cm;
+       
+    }
+    .NavRow{
+        padding: 0.2cm 0.5cm;
+    }
+}
