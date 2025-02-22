@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.HomeContainer {
+    background-color: #486455;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #486455;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1; 
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2; 
+}
+
+.heart {
+    width: 150px; 
+    height: 150px;
+    background: url('Images/mainLogo.png') no-repeat center;
+    background-size: contain;
+    position: relative;
+    animation: fillHeart 4s ease-in-out infinite;
+}
+
+@keyframes fillHeart {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+.HomeComponents {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9cm;
+    padding: 1cm;
+}
+
+.HomeRow1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1cm;
+    flex-wrap: wrap;
+    /* border: thin solid black; */
+}
+
+.HomeRow1Logo {
+    border-radius: 50%;
+    width: 4cm;
+    border: thin solid rgba(159, 159, 159, 0.281);
+    padding: 0.2cm;
+  
+    /* Breathing animation */
+    animation: breathe 2s ease-in-out infinite;
+}
+
+/* Smooth breathing effect */
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.HomeRow1col1 {
+    animation: slideLeft 4s ease-out;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.HomeRow1col2 {
+    animation: slideToCenter 4s ease-out;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes slideToCenter {
+    from {
+        transform: translateX(100vw);
+        /* Start from the right edge */
+    }
+
+    to {
+        transform: translateX(0%);
+        /* Stop at center */
+    }
+}
+
+
+.HomeRow1txt {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.02cm;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: forwards;
+    transition: 1s ease;
+}
+
+.HomeHead1 {
+    font-family: "Poppins";
+    font-size: 30px;
+    letter-spacing: 0.05cm;
+    color: rgb(238, 238, 238);
+    font-weight: 600;
+}
+
+.HomeHead1:hover {
+    color: rgb(255, 255, 255);
+}
+
+.HomeHead2 {
+    font-family: "Poppins";
+    font-size: 20px;
+    letter-spacing: 0.02cm;
+    color: rgba(255, 255, 255, 0.773);
+}
+
+.colYellow {
+    color: #E4AF47;
+}
+
+.HomeRow2txt {
+    font-family: 'Adley Pro';
+    font-size: 22px;
+    font-style: italic;
+    color: #fffcf6;
+}
+
+.HomeRow3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3cm;
+}
+
+.HomeRow3Btn {
+    border: none;
+    border-radius: 35px;
+    background-color: #E4AF47;
+    color: #486455;
+    font-size: 18px;
+    padding: 0.3cm 0.6cm;
+    box-shadow: 0.2px 0.5px 0.2px 2px rgba(101, 101, 101, 0.378);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.HomeRow3Btn:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0.2px 0.5px 0.2px 2px rgba(255, 255, 255, 0.186);
+    background-color: #ffc34a;
+}
+
+.HomeRow3Img{
+    width: 1cm;
+}
+
+.imgBgBtn{
+    /* width: 1cm; */
+    background-color: #E4AF47;
+    border-radius: 50%;
+    padding:0.2cm;
+    align-items: center;    
+    display: none;
+}
+@keyframes scaleAnimation {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animated-btn {
+    animation: scaleAnimation 1s ease-in-out infinite;
+  }
+  
+  .delay-0 { animation-delay: 3.5s; }
+  .delay-1 { animation-delay: 5.s; }
+  .delay-2 { animation-delay: 6.5s; }
+  .delay-3 { animation-delay: 7.5s; }
+  .delay-4 { animation-delay: 8.5s; }
+  
+.HomeRow4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 0.4cm;
+    row-gap: 0.4cm;
+}
+
+.ProductCard {
+    width: 5.5cm;
+    opacity: 0.7;
+}
+
+.ProductCard:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-out;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.productImg {
+    width: 100%;
+}
+
+.HomeRow5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    row-gap: 0.3cm;
+}
+
+.HomeRow5Btn {
+    border: none;
+    width: 10cm;
+    padding: 0.4cm;
+    background-color: #c8993b;
+    border-radius: 10px;
+    color: #486455;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.HomeRow5Btn:hover {
+    background-color: #E4AF47;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #2e4a33;
+    /* border: thin solid #E4AF47; */
+}
+
+
+
+@media screen and (max-width:900px) and (min-width:715px){
+    .HomeComponents{
+        row-gap: 0.7cm;
+        padding:0.8cm;
+    }
+
+    .HomeRow1{
+        column-gap: 0.8cm;
+    }
+
+    .HomeRow1Logo{
+        width:3.5cm;
+
+    }
+    .HomeHead1{
+        font-size: 28px;
+    }
+    .HomeHead2{
+        font-size: 18px;
+    }
+
+    .HomeRow2txt{
+        font-size: 18px;
+    }
+    .HomeRow3{
+       gap:0.15cm;
+    }
+    .HomeRow3Btn{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:715px) and (min-width:450px) {
+    .HomeComponents{
+        row-gap: 0.5cm;
+        padding:0.5cm;
+    }
+
+    .HomeRow1{
+        column-gap: 0.6cm;
+    }
+
+    .HomeRow1Logo{
+        width:2.5cm;
+
+    }
+    .HomeHead1{
+        font-size: 24px;
+    }
+    .HomeHead2{
+        font-size: 14px;
+    }
+
+    .HomeRow2txt{
+        font-size: 16px;
+    }
+    .HomeRow3{
+       gap:0.1cm;
+    }
+    .HomeRow3Btn{
+        font-size: 13px;
+        padding: 0.2cm 0.5cm;
+    }
+
+    .ProductCard{
+        width: 4.5cm;
+    }
+}
+
+@media screen and (max-width:450px){
+    .HomeRow1col2{
+        align-items: center;
+        justify-content: center;
+    }
+    .HomeComponents{
+        row-gap: 0.3cm;
+        padding:0.3cm 0.2cm;
+    }
+    .HomeRow1Logo{
+        width:2.2cm;
+
+    }
+    .HomeHead1{
+        font-size: 22px;
+    }
+    .HomeHead2{
+        font-size: 12px;
+    }
+
+    .HomeRow2txt{
+        font-size: 14px;
+    }
+    .HomeRow3{
+       gap:0.1cm;
+    }
+    .HomeRow3Img{
+       width:0.8cm;
+    }
+   
+    .ProductCard{
+        width: 3.5cm;
+    }
+
+    .HomeRow5Btn{
+        width: 8cm; 
+        padding: 0.25cm;
+    }
+}
+@media screen and (max-width:615px) {
+    .HomeRow3Btn{
+        display: none;
+    }
+    .imgBgBtn{
+        display: flex;
+    }
+}
