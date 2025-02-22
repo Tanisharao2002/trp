@@ -7,7 +7,7 @@ import instagram from "./Images/instagram.png";
 import phone from "./Images/phone-call.png";
 import website from "./Images/click.png";
 import facebook from "./Images/facebook.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 function Home() {
   // window.addEventListener("load", () => {
   //   setTimeout(() => {
@@ -19,39 +19,96 @@ function Home() {
   //   }, 2500);
   // });
 
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     console.log("Loader script running...");
 
-    useEffect(() => {
-      if (typeof window !== "undefined") {
-        console.log("Loader script running...");
-  
-        const hideLoader = () => {
-          const loader = document.querySelector(".loader-container");
-          if (loader) {
-            setTimeout(() => {
-              loader.style.opacity = "0"; // Fade out
-              setTimeout(() => {
-                loader.style.display = "none"; // Remove after fade
-                console.log("Loader hidden, showing content.");
-              }, 1000);
-            }, 2500);
-          }
-        };
-  
-        // Run hideLoader when the page fully loads
-        window.addEventListener("load", hideLoader);
-  
-        // Cleanup listener on unmount
-        return () => window.removeEventListener("load", hideLoader);
-      }
-    }, []);
+  //     const hideLoader = () => {
+  //       const loader = document.querySelector(".loader-container");
+  //       if (loader) {
+  //         setTimeout(() => {
+  //           loader.style.opacity = "0"; // Fade out
+  //           setTimeout(() => {
+  //             loader.style.display = "none"; // Remove after fade
+  //             console.log("Loader hidden, showing content.");
+  //           }, 1000);
+  //         }, 2500);
+  //       }
+  //     };
+
+  //     // Run hideLoader when the page fully loads
+  //     window.addEventListener("load", hideLoader);
+
+  //     // Cleanup listener on unmount
+  //     return () => window.removeEventListener("load", hideLoader);
+  //   }
+  // }, []);
+  const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     console.log("Initializing loader...");
+
+  //     const hideLoader = () => {
+  //       console.log("Hiding loader...");
+  //       setLoading(false);
+  //       const loader = document.querySelector(".loader-container");
+  //       if (loader) {
+  //         loader.style.opacity = "0"; // Fade out
+  //         setTimeout(() => {
+  //           loader.style.display = "none"; // Remove after fade
+  //           document.body.style.overflow = "auto"; // Ensure scrolling is enabled
+  //           setLoading(false);
+  //           console.log("Loader hidden, showing content.");
+  //         }, 1000);
+  //       }
+  //     };
+
+  //     // Use both DOMContentLoaded and load event
+  //     if (
+  //       document.readyState === "complete" ||
+  //       document.readyState === "interactive"
+  //     ) {
+  //       hideLoader();
+  //     } else {
+  //       document.addEventListener("DOMContentLoaded", hideLoader);
+  //       window.addEventListener("load", hideLoader);
+  //     }
+
+  //     // Cleanup listeners
+  //     return () => {
+  //       document.removeEventListener("DOMContentLoaded", hideLoader);
+  //       window.removeEventListener("load", hideLoader);
+  //     };
+  //   }
+  // }, []);
+  useEffect(() => {
+    console.log("Initializing loader...");
+
+    const hideLoader = () => {
+      console.log("Hiding loader...");
+      setTimeout(() => {
+        setLoading(false); // Ensure state update happens AFTER timeout
+      }, 2500);
+    };
+
+    window.addEventListener("load", hideLoader);
+
+    return () => window.removeEventListener("load", hideLoader);
+  }, []);
 
   return (
     <div className="HomeContainer">
-      <div class="loader-container">
-        <div class="fill"></div>
-        <div class="heart"></div>
-        <p className="HomeHead1">Welcome to The ReTail Project!!</p>
-      </div>
+      {
+        loading ? (
+          <div className="loader-container">
+            <div className="fill"></div>
+            <div className="heart"></div>
+            <p className="HomeHead1">Welcome to The ReTail Project!!</p>
+          </div>
+        ) : null // Instead of `()`, use `null`
+      }
+
       <div className="HomeComponents">
         <div className="HomeRow1">
           <div className="HomeRow1col1">
