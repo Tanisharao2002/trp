@@ -7,16 +7,43 @@ import instagram from "./Images/instagram.png";
 import phone from "./Images/phone-call.png";
 import website from "./Images/click.png";
 import facebook from "./Images/facebook.png";
+import { useEffect } from "react";
 function Home() {
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.querySelector(".loader-container").style.opacity = "0"; // Start fading out
-      setTimeout(() => {
-        document.querySelector(".loader-container").style.display = "none"; // Remove after fade
-        // document.querySelector(".HomeComponents").style.visibility = "visible"; // Remove after fade
-      }, 1000);
-    }, 2500);
-  });
+  // window.addEventListener("load", () => {
+  //   setTimeout(() => {
+  //     document.querySelector(".loader-container").style.opacity = "0"; // Start fading out
+  //     setTimeout(() => {
+  //       document.querySelector(".loader-container").style.display = "none"; // Remove after fade
+  //       // document.querySelector(".HomeComponents").style.visibility = "visible"; // Remove after fade
+  //     }, 1000);
+  //   }, 2500);
+  // });
+
+
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        console.log("Loader script running...");
+  
+        const hideLoader = () => {
+          const loader = document.querySelector(".loader-container");
+          if (loader) {
+            setTimeout(() => {
+              loader.style.opacity = "0"; // Fade out
+              setTimeout(() => {
+                loader.style.display = "none"; // Remove after fade
+                console.log("Loader hidden, showing content.");
+              }, 1000);
+            }, 2500);
+          }
+        };
+  
+        // Run hideLoader when the page fully loads
+        window.addEventListener("load", hideLoader);
+  
+        // Cleanup listener on unmount
+        return () => window.removeEventListener("load", hideLoader);
+      }
+    }, []);
 
   return (
     <div className="HomeContainer">
