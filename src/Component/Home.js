@@ -13,6 +13,7 @@ function Home() {
       document.querySelector(".loader-container").style.opacity = "0"; // Start fading out
       setTimeout(() => {
         document.querySelector(".loader-container").style.display = "none"; // Remove after fade
+        // document.querySelector(".HomeComponents").style.visibility = "visible"; // Remove after fade
       }, 1000);
     }, 2500);
   });
