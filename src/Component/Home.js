@@ -47,7 +47,9 @@ function Home() {
 
         <div className="HomeRow3">
           <a href="https://wa.me/+919664149148">
-            <button className="HomeRow3Btn animated-btn delay-0">WhatsApp</button>
+            <button className="HomeRow3Btn animated-btn delay-0">
+              WhatsApp
+            </button>
           </a>
           <a href="https://wa.me/+919664149148">
             <div className="imgBgBtn animated-btn delay-0">
@@ -55,7 +57,9 @@ function Home() {
             </div>
           </a>
           <a href="">
-            <button className="HomeRow3Btn animated-btn delay-1">Instagram</button>
+            <button className="HomeRow3Btn animated-btn delay-1">
+              Instagram
+            </button>
           </a>
           <a href="">
             <div className="imgBgBtn animated-btn delay-1">
@@ -63,7 +67,9 @@ function Home() {
             </div>
           </a>
           <a href="">
-            <button className="HomeRow3Btn animated-btn delay-2">Facebook</button>
+            <button className="HomeRow3Btn animated-btn delay-2">
+              Facebook
+            </button>
           </a>
           <a href="">
             <div className="imgBgBtn animated-btn delay-2">
@@ -71,7 +77,9 @@ function Home() {
             </div>
           </a>
           <a href="">
-            <button className="HomeRow3Btn animated-btn delay-3">Website</button>
+            <button className="HomeRow3Btn animated-btn delay-3">
+              Website
+            </button>
           </a>
           <a href="">
             <div className="imgBgBtn animated-btn delay-3">
@@ -79,7 +87,9 @@ function Home() {
             </div>
           </a>
           <a href="">
-            <button className="HomeRow3Btn animated-btn delay-4">Contact No</button>
+            <button className="HomeRow3Btn animated-btn delay-4">
+              Contact No
+            </button>
           </a>
           <a href="">
             <div className="imgBgBtn animated-btn delay-4">
