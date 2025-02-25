@@ -10,7 +10,7 @@
 }
 
 .loader-container {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -18,16 +18,16 @@
     background: #486455;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
     gap: 10px;
-    opacity: 1; 
+    opacity: 1;
     transition: opacity 0.3s ease-in-out;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .heart {
-    width: 150px; 
+    width: 150px;
     height: 150px;
     background: url('Images/mainLogo.png') no-repeat center;
     background-size: contain;
@@ -40,10 +40,12 @@
         opacity: 0.3;
         transform: scale(0.8);
     }
+
     50% {
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0.3;
         transform: scale(0.8);
@@ -73,7 +75,7 @@
     width: 4cm;
     border: thin solid rgba(159, 159, 159, 0.281);
     padding: 0.2cm;
-  
+
     /* Breathing animation */
     animation: breathe 2s ease-in-out infinite;
 }
@@ -84,10 +86,12 @@
         transform: scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: scale(1.05);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 0.5;
@@ -196,37 +200,62 @@
     background-color: #ffc34a;
 }
 
-.HomeRow3Img{
+.HomeRow3Img {
     width: 1cm;
 }
 
-.imgBgBtn{
+.imgBgBtn {
     /* width: 1cm; */
     background-color: #E4AF47;
     border-radius: 50%;
-    padding:0.2cm;
-    align-items: center;    
+    padding: 0.2cm;
+    align-items: center;
     display: none;
 }
+
 @keyframes scaleAnimation {
-    0%, 100% {
-      transform: scale(1);
+
+    0%,
+    100% {
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
-  }
-  
-  .animated-btn {
+}
+
+.animated-btn {
     animation: scaleAnimation 1s ease-in-out infinite;
-  }
-  
-  .delay-0 { animation-delay: 3.5s; }
-  .delay-1 { animation-delay: 5.s; }
-  .delay-2 { animation-delay: 6.5s; }
-  .delay-3 { animation-delay: 7.5s; }
-  .delay-4 { animation-delay: 8.5s; }
-  
+}
+
+.delay-0 {
+    animation-delay: 3.5s;
+}
+
+.delay-1 {
+    animation-delay: 5.s;
+}
+
+.delay-2 {
+    animation-delay: 6.5s;
+}
+
+.delay-3 {
+    animation-delay: 7.5s;
+}
+
+.delay-4 {
+    animation-delay: 8.5s;
+}
+
+.HomeRow3Btn:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    box-shadow: 0.2px 0.5px 0.2px 2px rgba(255, 255, 255, 0.186);
+    background-color: #ffc34a;
+}
+
 .HomeRow4 {
     display: flex;
     flex-direction: row;
@@ -283,119 +312,135 @@
 
 
 
-@media screen and (max-width:900px) and (min-width:715px){
-    .HomeComponents{
+@media screen and (max-width:900px) and (min-width:715px) {
+    .HomeComponents {
         row-gap: 0.7cm;
-        padding:0.8cm;
+        padding: 0.8cm;
     }
 
-    .HomeRow1{
+    .HomeRow1 {
         column-gap: 0.8cm;
     }
 
-    .HomeRow1Logo{
-        width:3.5cm;
+    .HomeRow1Logo {
+        width: 3.5cm;
 
     }
-    .HomeHead1{
+
+    .HomeHead1 {
         font-size: 28px;
     }
-    .HomeHead2{
+
+    .HomeHead2 {
         font-size: 18px;
     }
 
-    .HomeRow2txt{
+    .HomeRow2txt {
         font-size: 18px;
     }
-    .HomeRow3{
-       gap:0.15cm;
+
+    .HomeRow3 {
+        gap: 0.15cm;
     }
-    .HomeRow3Btn{
+
+    .HomeRow3Btn {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width:715px) and (min-width:450px) {
-    .HomeComponents{
+    .HomeComponents {
         row-gap: 0.5cm;
-        padding:0.5cm;
+        padding: 0.5cm;
     }
 
-    .HomeRow1{
+    .HomeRow1 {
         column-gap: 0.6cm;
     }
 
-    .HomeRow1Logo{
-        width:2.5cm;
+    .HomeRow1Logo {
+        width: 2.5cm;
 
     }
-    .HomeHead1{
+
+    .HomeHead1 {
         font-size: 24px;
     }
-    .HomeHead2{
+
+    .HomeHead2 {
         font-size: 14px;
     }
 
-    .HomeRow2txt{
+    .HomeRow2txt {
         font-size: 16px;
     }
-    .HomeRow3{
-       gap:0.1cm;
+
+    .HomeRow3 {
+        gap: 0.1cm;
     }
-    .HomeRow3Btn{
+
+    .HomeRow3Btn {
         font-size: 13px;
         padding: 0.2cm 0.5cm;
     }
 
-    .ProductCard{
+    .ProductCard {
         width: 4.5cm;
     }
 }
 
-@media screen and (max-width:450px){
-    .HomeRow1col2{
+@media screen and (max-width:450px) {
+    .HomeRow1col2 {
         align-items: center;
         justify-content: center;
     }
-    .HomeComponents{
+
+    .HomeComponents {
         row-gap: 0.3cm;
-        padding:0.3cm 0.2cm;
+        padding: 0.3cm 0.2cm;
     }
-    .HomeRow1Logo{
-        width:2.2cm;
+
+    .HomeRow1Logo {
+        width: 2.2cm;
 
     }
-    .HomeHead1{
+
+    .HomeHead1 {
         font-size: 22px;
     }
-    .HomeHead2{
+
+    .HomeHead2 {
         font-size: 12px;
     }
 
-    .HomeRow2txt{
+    .HomeRow2txt {
         font-size: 14px;
     }
-    .HomeRow3{
-       gap:0.1cm;
+
+    .HomeRow3 {
+        gap: 0.1cm;
     }
-    .HomeRow3Img{
-       width:0.8cm;
+
+    .HomeRow3Img {
+        width: 0.8cm;
     }
-   
-    .ProductCard{
+
+    .ProductCard {
         width: 3.5cm;
     }
 
-    .HomeRow5Btn{
-        width: 8cm; 
+    .HomeRow5Btn {
+        width: 8cm;
         padding: 0.25cm;
     }
 }
+
 @media screen and (max-width:615px) {
-    .HomeRow3Btn{
+    .HomeRow3Btn {
         display: none;
     }
-    .imgBgBtn{
+
+    .imgBgBtn {
         display: flex;
     }
 }

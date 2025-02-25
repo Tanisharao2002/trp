@@ -9,15 +9,15 @@ import website from "./Images/click.png";
 import facebook from "./Images/facebook.png";
 import { useEffect, useState } from "react";
 function Home() {
-  // window.addEventListener("load", () => {
-  //   setTimeout(() => {
-  //     document.querySelector(".loader-container").style.opacity = "0"; // Start fading out
-  //     setTimeout(() => {
-  //       document.querySelector(".loader-container").style.display = "none"; // Remove after fade
-  //       // document.querySelector(".HomeComponents").style.visibility = "visible"; // Remove after fade
-  //     }, 1000);
-  //   }, 2500);
-  // });
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelector(".loader-container").style.opacity = "0"; // Start fading out
+      setTimeout(() => {
+        document.querySelector(".loader-container").style.display = "none"; // Remove after fade
+        // document.querySelector(".HomeComponents").style.visibility = "visible"; // Remove after fade
+      }, 1000);
+    }, 2500);
+  });
 
   // useEffect(() => {
   //   if (typeof window !== "undefined") {
@@ -43,7 +43,7 @@ function Home() {
   //     return () => window.removeEventListener("load", hideLoader);
   //   }
   // }, []);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
   //   if (typeof window !== "undefined") {
@@ -82,33 +82,45 @@ function Home() {
   //     };
   //   }
   // }, []);
-  useEffect(() => {
-    console.log("Initializing loader...");
+  // useEffect(() => {
+  //   console.log("Initializing loader...");
 
-    const hideLoader = () => {
-      console.log("Hiding loader...");
-      setTimeout(() => {
-        setLoading(false); // Ensure state update happens AFTER timeout
-      }, 2500);
-    };
+  //   const hideLoader = () => {
+  //     console.log("Hiding loader...");
+  //     setTimeout(() => {
+  //       setLoading(false); // Ensure state update happens AFTER timeout
+  //     }, 2500);
+  //   };
 
-    window.addEventListener("load", hideLoader);
+  //   window.addEventListener("load", hideLoader);
 
-    return () => window.removeEventListener("load", hideLoader);
-  }, []);
+  //   return () => window.removeEventListener("load", hideLoader);
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log("Initializing loader...");
+
+  //   const hideLoader = () => {
+  //     console.log("Hiding loader...");
+  //     setTimeout(() => {
+  //       setLoading(false);
+  //     }, 2500);
+  //   };
+
+  //   // Use 'DOMContentLoaded' to ensure it triggers when the HTML is loaded
+  //   document.addEventListener("DOMContentLoaded", hideLoader);
+
+  //   return () => document.removeEventListener("DOMContentLoaded", hideLoader);
+  // }, []);
 
   return (
     <div className="HomeContainer">
-      {
-        loading ? (
-          <div className="loader-container">
-            <div className="fill"></div>
-            <div className="heart"></div>
-            <p className="HomeHead1">Welcome to The ReTail Project!!</p>
-          </div>
-        ) : null // Instead of `()`, use `null`
-      }
-
+      <div className="loader-container">
+        <div className="fill"></div>
+        <div className="heart"></div>
+        <p className="HomeHead1">Welcome to The ReTail Project!!</p>
+      </div>
+5
       <div className="HomeComponents">
         <div className="HomeRow1">
           <div className="HomeRow1col1">
